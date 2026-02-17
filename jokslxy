@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoksLxy | 99 Nights Joki Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        .btn-black {
+            background-color: #1a1a1a;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .btn-black:hover {
+            background-color: #333333;
+            transform: translateY(-1px);
+        }
+
+        .card {
+            border: 1px solid #e5e5e5;
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            border-color: #1a1a1a;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card-featured {
+            border: 2px solid #1a1a1a;
+            position: relative;
+        }
+
+        .card-featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background: #1a1a1a;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .tab-btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border: 1px solid #e5e5e5;
+            background: white;
+            color: #666;
+        }
+
+        .tab-btn.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .tab-btn:not(.active):hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .price-tag {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .highlight-mega {
+            color: #16a34a;
+            font-weight: 700;
+        }
+
+        .time-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7rem;
+            color: #6b7280;
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-top: 4px;
+        }
+
+        .diamond-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7rem;
+            color: #0891b2;
+            background: #cffafe;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-top: 4px;
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-white border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                        JL
+                    </div>
+                    <span class="text-lg font-bold tracking-tight">Joks<span class="text-gray-500">Lxy</span></span>
+                </div>
+                <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan" target="_blank" class="whatsapp-btn px-5 py-2 rounded-lg font-medium text-sm flex items-center gap-2" style="width: auto;">
+                    <i class="fab fa-whatsapp"></i>
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-12 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-3 text-gray-900">JoksLxy</h1>
+            <p class="text-gray-500 max-w-md mx-auto text-sm mb-6">
+                Joki Day 99 Nights in The Forest.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-xs text-gray-400">
+                <span class="flex items-center gap-1"><i class="fas fa-check text-green-500"></i> 100% Aman</span>
+                <span class="flex items-center gap-1"><i class="fas fa-bolt text-yellow-500"></i> Proses Cepat</span>
+                <span class="flex items-center gap-1"><i class="fas fa-headset text-blue-500"></i> 24/7 Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-2">Daftar Harga</h2>
+                <p class="text-gray-500 text-sm">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex justify-center gap-2 mb-8 flex-wrap">
+                <button onclick="switchTab('day')" id="tab-day" class="tab-btn active">Joki Day</button>
+                <button onclick="switchTab('diamond')" id="tab-diamond" class="tab-btn">+ Diamond</button>
+                <button onclick="switchTab('hemat')" id="tab-hemat" class="tab-btn">Paket Hemat</button>
+            </div>
+
+            <!-- Joki Day -->
+            <div id="content-day" class="tab-content active">
+                <div class="text-center mb-6">
+                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-medium">
+                        <i class="fas fa-check-circle text-[10px]"></i> Harga Flat - No Hidden Fee
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20100%20(Estimasi%3A%2056%20Menit)%20-%20Total%3A%20Rp%208.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">100 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 8.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 56 Menit
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20200%20(Estimasi%3A%201%20Jam%2052%20Menit)%20-%20Total%3A%20Rp%2015.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">200 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 15.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 1 Jam 52 Menit
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20300%20(Estimasi%3A%202%20Jam%2048%20Menit)%20-%20Total%3A%20Rp%2025.000" target="_blank" class="card card-featured bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1 mt-3">300 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 25.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 2 Jam 48 Menit
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20400%20(Estimasi%3A%203%20Jam%2045%20Menit)%20-%20Total%3A%20Rp%2035.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">400 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 35.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 3 Jam 45 Menit
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20500%20(Estimasi%3A%204%20Jam%2041%20Menit)%20-%20Total%3A%20Rp%2055.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">500 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 55.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 4 Jam 41 Menit
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%201000%20(Estimasi%3A%209%20Jam%2022%20Menit)%20-%20Total%3A%20Rp%2085.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">1000 Day</div>
+                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 85.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 9 Jam 22 Menit
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Joki Day + Diamond -->
+            <div id="content-diamond" class="tab-content">
+                <div class="text-center mb-6">
+                    <div class="inline-block">
+                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-50 text-amber-600 text-xs font-medium mb-2">
+                            <i class="fas fa-info-circle text-[10px]"></i> Biaya Tambahan Diamond
+                        </span>
+                        <p class="text-xs text-gray-400">100-300 Day: +Rp 3.000 | 400-1000 Day: +Rp 5.000</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20100%20(Estimasi%3A%2056%20Menit)%20-%20Bonus%20~24%20Diamond%20-%20Total%3A%20Rp%2011.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">100 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 8K</span>
+                            <span class="text-xs text-amber-600">+3K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 11.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 56 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~24 Diamond
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20200%20(Estimasi%3A%201%20Jam%2052%20Menit)%20-%20Bonus%20~48%20Diamond%20-%20Total%3A%20Rp%2018.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">200 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 15K</span>
+                            <span class="text-xs text-amber-600">+3K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 18.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 1 Jam 52 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~48 Diamond
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20300%20(Estimasi%3A%202%20Jam%2048%20Menit)%20-%20Bonus%20~72%20Diamond%20-%20Total%3A%20Rp%2028.000" target="_blank" class="card card-featured bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1 mt-3">300 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 25K</span>
+                            <span class="text-xs text-amber-600">+3K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 28.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 2 Jam 48 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~72 Diamond
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20400%20(Estimasi%3A%203%20Jam%2045%20Menit)%20-%20Bonus%20~96%20Diamond%20-%20Total%3A%20Rp%2040.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">400 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 35K</span>
+                            <span class="text-xs text-amber-600">+5K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 40.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 3 Jam 45 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~96 Diamond
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20500%20(Estimasi%3A%204%20Jam%2041%20Menit)%20-%20Bonus%20~120%20Diamond%20-%20Total%3A%20Rp%2060.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">500 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 55K</span>
+                            <span class="text-xs text-amber-600">+5K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 60.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 4 Jam 41 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~120 Diamond
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%201000%20(Estimasi%3A%209%20Jam%2022%20Menit)%20-%20Bonus%20~240%20Diamond%20-%20Total%3A%20Rp%2090.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
+                        <div class="text-xs text-gray-400 mb-1">1000 Day</div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 85K</span>
+                            <span class="text-xs text-amber-600">+5K</span>
+                        </div>
+                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 90.000</div>
+                        <div class="time-badge">
+                            <i class="fas fa-clock text-[10px]"></i> 9 Jam 22 Menit
+                        </div>
+                        <div class="diamond-badge">
+                            <i class="fas fa-gem text-[10px]"></i> ~240 Diamond
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Paket Hemat -->
+            <div id="content-hemat" class="tab-content">
+                <div class="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Paket%20Hemat%2024%20Jam%20(Estimasi%3A%2024%20Jam)%20-%20Bonus%20400%2B%20Diamond%20-%20Total%3A%20Rp%20150.000" target="_blank" class="card bg-white rounded-2xl p-6 cursor-pointer block">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-xs text-gray-400 mb-1">Non-Stop</div>
+                                <div class="text-2xl font-bold text-gray-900">24 Jam</div>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-clock text-gray-600"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 price-tag mb-4">Rp 150.000</div>
+                        <div class="space-y-2 text-xs text-gray-500 mb-4">
+                            <div class="flex justify-between py-1 border-b border-gray-100">
+                                <span>Estimasi Day</span>
+                                <span class="highlight-mega">2000-2300+</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-gray-100">
+                                <span>Bonus Diamond</span>
+                                <span class="text-gray-900 font-medium">400+</span>
+                            </div>
+                            <div class="flex justify-between py-1">
+                                <span>Update</span>
+                                <span class="text-gray-900 font-medium">Tiap 4 jam</span>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-green-600 bg-green-50 px-2 py-1 rounded">No additional fee</span>
+                    </a>
+
+                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Paket%20Hemat%202%20Hari%20(Estimasi%3A%2048%20Jam)%20-%20Bonus%20800%2B%20Diamond%20-%20Total%3A%20Rp%20200.000" target="_blank" class="card card-featured bg-white rounded-2xl p-6 cursor-pointer block">
+                        <div class="flex justify-between items-start mb-4 mt-3">
+                            <div>
+                                <div class="text-xs text-gray-400 mb-1">Intensive</div>
+                                <div class="text-2xl font-bold text-gray-900">2 Hari</div>
+                            </div>
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-calendar-week text-gray-600"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 price-tag mb-4">Rp 200.000</div>
+                        <div class="space-y-2 text-xs text-gray-500 mb-4">
+                            <div class="flex justify-between py-1 border-b border-gray-100">
+                                <span>Estimasi Day</span>
+                                <span class="highlight-mega">4000-5000+</span>
+                            </div>
+                            <div class="flex justify-between py-1 border-b border-gray-100">
+                                <span>Bonus Diamond</span>
+                                <span class="text-gray-900 font-medium">800+</span>
+                            </div>
+                            <div class="flex justify-between py-1">
+                                <span>Update</span>
+                                <span class="text-gray-900 font-medium">Tiap 2 jam</span>
+                            </div>
+                        </div>
+                        <span class="text-[10px] text-green-600 bg-green-50 px-2 py-1 rounded">Best value - No additional fee</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 px-6 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-6 text-center">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i class="fas fa-shield-alt text-green-500"></i>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-900">100% Aman</div>
+                    <div class="text-xs text-gray-400 mt-1">No cheat & exploit</div>
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i class="fas fa-bolt text-yellow-500"></i>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-900">Proses Cepat</div>
+                    <div class="text-xs text-gray-400 mt-1">2-24 jam selesai</div>
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
+                        <i class="fas fa-headset text-blue-500"></i>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-900">Support 24/7</div>
+                    <div class="text-xs text-gray-400 mt-1">Always online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-black rounded flex items-center justify-center text-white font-bold text-xs">JL</div>
+                <span class="font-bold text-sm">Joks<span class="text-gray-500">Lxy</span></span>
+            </div>
+            <div class="text-xs text-gray-400">© 2024 JoksLxy. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('content-' + tab).classList.add('active');
+            document.getElementById('tab-' + tab).classList.add('active');
+        }
+    </script>
+</body>
+</html>
