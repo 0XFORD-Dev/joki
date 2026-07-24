@@ -1,468 +1,1528 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoksLxy | 99 Nights Joki Service</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        body {
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
 
-        .btn-black {
-            background-color: #1a1a1a;
-            color: white;
-            transition: all 0.2s;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .btn-black:hover {
-            background-color: #333333;
-            transform: translateY(-1px);
-        }
+<title>0XFORD | Premium Roblox Script Developer</title>
 
-        .card {
-            border: 1px solid #e5e5e5;
-            transition: all 0.2s;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .card:hover {
-            border-color: #1a1a1a;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .card-featured {
-            border: 2px solid #1a1a1a;
-            position: relative;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        .card-featured::before {
-            content: 'POPULAR';
-            position: absolute;
-            top: -1px;
-            right: -1px;
-            background: #1a1a1a;
-            color: white;
-            font-size: 0.65rem;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-bottom-left-radius: 8px;
-        }
+<style>
 
-        .tab-btn {
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            border: 1px solid #e5e5e5;
-            background: white;
-            color: #666;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        .tab-btn.active {
-            background: #1a1a1a;
-            color: white;
-            border-color: #1a1a1a;
-        }
+:root{
 
-        .tab-btn:not(.active):hover {
-            border-color: #1a1a1a;
-            color: #1a1a1a;
-        }
+--bg:#060B18;
+--bg2:#0B1328;
+--card:rgba(255,255,255,.05);
+--line:rgba(255,255,255,.08);
 
-        .tab-content {
-            display: none;
-        }
+--blue:#00D9FF;
+--white:#ffffff;
+--text:#b6bfd4;
 
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+body{
 
-        .price-tag {
-            font-variant-numeric: tabular-nums;
-        }
+background:var(--bg);
+color:white;
+overflow-x:hidden;
 
-        .highlight-mega {
-            color: #16a34a;
-            font-weight: 700;
-        }
+}
 
-        .time-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.7rem;
-            color: #6b7280;
-            background: #f3f4f6;
-            padding: 2px 8px;
-            border-radius: 12px;
-            margin-top: 4px;
-        }
+/* SCROLL */
 
-        .diamond-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.7rem;
-            color: #0891b2;
-            background: #cffafe;
-            padding: 2px 8px;
-            border-radius: 12px;
-            margin-top: 4px;
-        }
+::-webkit-scrollbar{
+width:8px;
+}
 
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-            color: white;
-            transition: all 0.2s;
-        }
+::-webkit-scrollbar-thumb{
 
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-    </style>
+background:var(--blue);
+
+}
+
+/* GRID BACKGROUND */
+
+body::before{
+
+content:'';
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+background-size:50px 50px;
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:'';
+position:fixed;
+left:-20%;
+top:-20%;
+
+width:140%;
+height:140%;
+
+background:
+
+radial-gradient(circle at 30% 30%,rgba(0,217,255,.15),transparent 30%),
+radial-gradient(circle at 70% 70%,rgba(0,100,255,.15),transparent 35%);
+
+filter:blur(100px);
+
+animation:moveGlow 12s linear infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes moveGlow{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(120px,-80px);
+
+}
+
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+
+width:100%;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 8%;
+
+background:rgba(6,11,24,.75);
+
+backdrop-filter:blur(16px);
+
+border-bottom:1px solid rgba(255,255,255,.06);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+letter-spacing:2px;
+
+color:white;
+
+}
+
+.logo span{
+
+color:var(--blue);
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover{
+
+color:var(--blue);
+
+}
+
+.contact-btn{
+
+padding:12px 24px;
+
+border-radius:40px;
+
+background:linear-gradient(90deg,#00D9FF,#2979FF);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+box-shadow:0 0 25px rgba(0,217,255,.4);
+
+transition:.3s;
+
+}
+
+.contact-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 8%;
+
+}
+
+.hero-left{
+
+width:55%;
+
+}
+
+.small{
+
+color:var(--blue);
+
+font-size:18px;
+
+letter-spacing:3px;
+
+margin-bottom:15px;
+
+}
+
+.hero h1{
+
+font-size:90px;
+
+line-height:1;
+
+margin-bottom:18px;
+
+font-weight:800;
+
+text-shadow:0 0 40px rgba(0,217,255,.4);
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+.hero h2 span{
+
+color:var(--blue);
+
+}
+
+.hero p{
+
+color:var(--text);
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:700px;
+
+margin-bottom:35px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn{
+
+padding:17px 34px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.btn-primary{
+
+background:linear-gradient(90deg,#00D9FF,#2979FF);
+
+color:white;
+
+box-shadow:0 0 25px rgba(0,217,255,.4);
+
+}
+
+.btn-secondary{
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* HERO IMAGE */
+
+.hero-right{
+
+width:40%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.circle{
+
+width:450px;
+
+height:450px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,#00d9ff33,transparent 65%);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border:2px solid rgba(0,217,255,.2);
+
+box-shadow:
+
+0 0 60px rgba(0,217,255,.25),
+
+inset 0 0 40px rgba(0,217,255,.2);
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+.circle img{
+
+width:360px;
+
+filter:drop-shadow(0 0 40px #00d9ff);
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* SECTION */
+
+section{
+
+padding:120px 8%;
+
+}
+
+.section-title{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.section-title span{
+
+color:var(--blue);
+
+}
+
+.section-sub{
+
+color:var(--text);
+
+margin-bottom:50px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+.hero{
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+padding-top:150px;
+
+}
+
+.hero-left{
+
+width:100%;
+
+}
+
+.hero-right{
+
+width:100%;
+
+margin-top:60px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.hero h2{
+
+font-size:26px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.circle{
+
+width:320px;
+height:320px;
+
+}
+
+.circle img{
+
+width:240px;
+
+}
+
+}
+
+</style>
+
 </head>
-<body class="antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 bg-white border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                        JL
-                    </div>
-                    <span class="text-lg font-bold tracking-tight">Joks<span class="text-gray-500">Lxy</span></span>
-                </div>
-                <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan" target="_blank" class="whatsapp-btn px-5 py-2 rounded-lg font-medium text-sm flex items-center gap-2" style="width: auto;">
-                    <i class="fab fa-whatsapp"></i>
-                    Order Now
-                </a>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero -->
-    <section class="pt-28 pb-12 px-6 bg-gray-50">
-        <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-3 text-gray-900">JoksLxy</h1>
-            <p class="text-gray-500 max-w-md mx-auto text-sm mb-6">
-                Joki Day 99 Nights in The Forest.
-            </p>
-            <div class="flex items-center justify-center gap-6 text-xs text-gray-400">
-                <span class="flex items-center gap-1"><i class="fas fa-check text-green-500"></i> 100% Aman</span>
-                <span class="flex items-center gap-1"><i class="fas fa-bolt text-yellow-500"></i> Proses Cepat</span>
-                <span class="flex items-center gap-1"><i class="fas fa-headset text-blue-500"></i> 24/7 Support</span>
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-12 px-6">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold mb-2">Daftar Harga</h2>
-                <p class="text-gray-500 text-sm">Pilih paket yang sesuai dengan kebutuhan Anda</p>
-            </div>
+<div class="logo">
+0X<span>FORD</span>
+</div>
 
-            <!-- Tabs -->
-            <div class="flex justify-center gap-2 mb-8 flex-wrap">
-                <button onclick="switchTab('day')" id="tab-day" class="tab-btn active">Joki Day</button>
-                <button onclick="switchTab('diamond')" id="tab-diamond" class="tab-btn">Joki Day + Diamond</button>
-                <button onclick="switchTab('hemat')" id="tab-hemat" class="tab-btn">Paket Hemat</button>
-            </div>
+<ul>
 
-            <!-- Joki Day -->
-            <div id="content-day" class="tab-content active">
-                <div class="text-center mb-6">
-                    <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-green-50 text-green-600 text-xs font-medium">
-                        <i class="fas fa-check-circle text-[10px]"></i> Harga Flat - No Hidden Fee
-                    </span>
-                </div>
+<li><a href="#home">Home</a></li>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20100%20(Estimasi%3A%2056%20Menit)%20-%20Total%3A%20Rp%208.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">100 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 8.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 56 Menit
-                        </div>
-                    </a>
+<li><a href="#about">About</a></li>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20200%20(Estimasi%3A%201%20Jam%2052%20Menit)%20-%20Total%3A%20Rp%2015.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">200 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 15.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 1 Jam 52 Menit
-                        </div>
-                    </a>
+<li><a href="#expertise">Expertise</a></li>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20300%20(Estimasi%3A%202%20Jam%2048%20Menit)%20-%20Total%3A%20Rp%2025.000" target="_blank" class="card card-featured bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1 mt-3">300 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 25.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 2 Jam 48 Menit
-                        </div>
-                    </a>
+<li><a href="#projects">Projects</a></li>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20400%20(Estimasi%3A%203%20Jam%2045%20Menit)%20-%20Total%3A%20Rp%2035.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">400 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 35.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 3 Jam 45 Menit
-                        </div>
-                    </a>
+<li><a href="#contact">Contact</a></li>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20500%20(Estimasi%3A%204%20Jam%2041%20Menit)%20-%20Total%3A%20Rp%2055.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">500 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 55.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 4 Jam 41 Menit
-                        </div>
-                    </a>
+</ul>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%201000%20(Estimasi%3A%209%20Jam%2022%20Menit)%20-%20Total%3A%20Rp%2085.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">1000 Day</div>
-                        <div class="text-xl font-bold text-gray-900 price-tag">Rp 85.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 9 Jam 22 Menit
-                        </div>
-                    </a>
-                </div>
-            </div>
+<a href="#contact" class="contact-btn">
+Contact Me
+</a>
 
-            <!-- Joki Day + Diamond -->
-            <div id="content-diamond" class="tab-content">
-                <div class="text-center mb-6">
-                    <div class="inline-block">
-                        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-50 text-amber-600 text-xs font-medium mb-2">
-                            <i class="fas fa-info-circle text-[10px]"></i> Biaya Tambahan Diamond
-                        </span>
-                        <p class="text-xs text-gray-400">100-300 Day: +Rp 2.000 | 400-1000 Day: +Rp 4.000</p>
-                    </div>
-                </div>
+</nav>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20100%20(Estimasi%3A%2056%20Menit)%20-%20Bonus%20~24%20Diamond%20-%20Total%3A%20Rp%2011.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">100 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 8K</span>
-                            <span class="text-xs text-amber-600">+2K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 10.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 56 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 24 Diamond
-                        </div>
-                    </a>
+<section class="hero" id="home">
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20200%20(Estimasi%3A%201%20Jam%2052%20Menit)%20-%20Bonus%20~48%20Diamond%20-%20Total%3A%20Rp%2018.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">200 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 15K</span>
-                            <span class="text-xs text-amber-600">+2K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 17.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 1 Jam 52 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 48 Diamond
-                        </div>
-                    </a>
+<div class="hero-left">
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20300%20(Estimasi%3A%202%20Jam%2048%20Menit)%20-%20Bonus%20~72%20Diamond%20-%20Total%3A%20Rp%2028.000" target="_blank" class="card card-featured bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1 mt-3">300 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 25K</span>
-                            <span class="text-xs text-amber-600">+2K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 27.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 2 Jam 48 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 72 Diamond
-                        </div>
-                    </a>
+<div class="small">
+HELLO, I'M
+</div>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20400%20(Estimasi%3A%203%20Jam%2045%20Menit)%20-%20Bonus%20~96%20Diamond%20-%20Total%3A%20Rp%2040.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">400 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 35K</span>
-                            <span class="text-xs text-amber-600">+5K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 40.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 3 Jam 45 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 96 Diamond
-                        </div>
-                    </a>
+<h1>
+0XFORD
+</h1>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%20500%20(Estimasi%3A%204%20Jam%2041%20Menit)%20-%20Bonus%20~120%20Diamond%20-%20Total%3A%20Rp%2060.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">500 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 55K</span>
-                            <span class="text-xs text-amber-600">+5K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 60.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 4 Jam 41 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 120 Diamond
-                        </div>
-                    </a>
+<h2>
+Roblox Script <span>Developer</span>
+</h2>
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Joki%20Day%20%2B%20Diamond%201000%20(Estimasi%3A%209%20Jam%2022%20Menit)%20-%20Bonus%20~240%20Diamond%20-%20Total%3A%20Rp%2090.000" target="_blank" class="card bg-white rounded-xl p-4 cursor-pointer block">
-                        <div class="text-xs text-gray-400 mb-1">1000 Day</div>
-                        <div class="flex items-baseline gap-1">
-                            <span class="text-lg font-bold text-gray-900 price-tag">Rp 85K</span>
-                            <span class="text-xs text-amber-600">+5K</span>
-                        </div>
-                        <div class="text-xs font-medium text-gray-900 mt-1">Total: Rp 90.000</div>
-                        <div class="time-badge">
-                            <i class="fas fa-clock text-[10px]"></i> 9 Jam 22 Menit
-                        </div>
-                        <div class="diamond-badge">
-                            <i class="fas fa-gem text-[10px]"></i> 240 Diamond
-                        </div>
-                    </a>
-                </div>
-            </div>
+<p>
 
-            <!-- Paket Hemat -->
-            <div id="content-hemat" class="tab-content">
-                <div class="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Paket%20Hemat%2024%20Jam%20(Estimasi%3A%2024%20Jam)%20-%20Bonus%20400%2B%20Diamond%20-%20Total%3A%20Rp%20150.000" target="_blank" class="card bg-white rounded-2xl p-6 cursor-pointer block">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <div class="text-xs text-gray-400 mb-1">Non-Stop</div>
-                                <div class="text-2xl font-bold text-gray-900">24 Jam</div>
-                            </div>
-                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
-                                <i class="fas fa-clock text-gray-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-3xl font-bold text-gray-900 price-tag mb-4">Rp 125.000</div>
-                        <div class="space-y-2 text-xs text-gray-500 mb-4">
-                            <div class="flex justify-between py-1 border-b border-gray-100">
-                                <span>Estimasi Day</span>
-                                <span class="highlight-mega">2000-2300+</span>
-                            </div>
-                            <div class="flex justify-between py-1 border-b border-gray-100">
-                                <span>Bonus Diamond</span>
-                                <span class="text-gray-900 font-medium">400+</span>
-                            </div>
-                            <div class="flex justify-between py-1">
-                                <span>Update</span>
-                                <span class="text-gray-900 font-medium">Tiap 4 jam</span>
-                            </div>
-                        </div>
-                        <span class="text-[10px] text-green-600 bg-green-50 px-2 py-1 rounded">No additional fee</span>
-                    </a>
+Creating premium Roblox scripts with modern UI,
+clean Lua code,
+fast performance,
+and professional quality.
 
-                    <a href="https://wa.me/6283129275631?text=Halo%20mimin%20saya%20mau%20pesan%20yang%20Paket%20Hemat%202%20Hari%20(Estimasi%3A%2048%20Jam)%20-%20Bonus%20800%2B%20Diamond%20-%20Total%3A%20Rp%20200.000" target="_blank" class="card card-featured bg-white rounded-2xl p-6 cursor-pointer block">
-                        <div class="flex justify-between items-start mb-4 mt-3">
-                            <div>
-                                <div class="text-xs text-gray-400 mb-1">Non-Stop</div>
-                                <div class="text-2xl font-bold text-gray-900">2 Hari</div>
-                            </div>
-                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
-                                <i class="fas fa-calendar-week text-gray-600"></i>
-                            </div>
-                        </div>
-                        <div class="text-3xl font-bold text-gray-900 price-tag mb-4">Rp 175.000</div>
-                        <div class="space-y-2 text-xs text-gray-500 mb-4">
-                            <div class="flex justify-between py-1 border-b border-gray-100">
-                                <span>Estimasi Day</span>
-                                <span class="highlight-mega">4000-5000+</span>
-                            </div>
-                            <div class="flex justify-between py-1 border-b border-gray-100">
-                                <span>Bonus Diamond</span>
-                                <span class="text-gray-900 font-medium">800+</span>
-                            </div>
-                            <div class="flex justify-between py-1">
-                                <span>Update</span>
-                                <span class="text-gray-900 font-medium">Tiap 2 jam</span>
-                            </div>
-                        </div>
-                        <span class="text-[10px] text-green-600 bg-green-50 px-2 py-1 rounded">Best value - No additional fee</span>
-                    </a>
-                </div>
-            </div>
+</p>
 
-        </div>
-    </section>
+<div class="buttons">
 
-    <!-- Features -->
-    <section class="py-12 px-6 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid grid-cols-3 gap-6 text-center">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
-                        <i class="fas fa-shield-alt text-green-500"></i>
-                    </div>
-                    <div class="text-sm font-semibold text-gray-900">100% Aman</div>
-                    <div class="text-xs text-gray-400 mt-1">No cheat & exploit</div>
-                </div>
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
-                        <i class="fas fa-bolt text-yellow-500"></i>
-                    </div>
-                    <div class="text-sm font-semibold text-gray-900">Proses Cepat</div>
-                    <div class="text-xs text-gray-400 mt-1">1-24 jam selesai</div>
-                </div>
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center mx-auto mb-3 shadow-sm">
-                        <i class="fas fa-headset text-blue-500"></i>
-                    </div>
-                    <div class="text-sm font-semibold text-gray-900">Support 24/7</div>
-                    <div class="text-xs text-gray-400 mt-1">Always online</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<a href="#projects" class="btn btn-primary">
 
-    <!-- Footer -->
-    <footer class="py-6 px-6 border-t border-gray-200">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-2">
-                <div class="w-6 h-6 bg-black rounded flex items-center justify-center text-white font-bold text-xs">JL</div>
-                <span class="font-bold text-sm">Joks<span class="text-gray-500">Lxy</span></span>
-            </div>
-            <div class="text-xs text-gray-400">JoksLxy. All rights reserved.</div>
-        </div>
-    </footer>
+View Projects
 
-    <script>
-        function switchTab(tab) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            
-            document.getElementById('content-' + tab).classList.add('active');
-            document.getElementById('tab-' + tab).classList.add('active');
-        }
-    </script>
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+
+Contact Me
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="circle">
+
+<img src="https://tr.rbxcdn.com/180DAY-4203e0d4a57b07c87d57f4afeb67f8df/420/420/AvatarHeadshot/Png/noFilter"
+alt="Roblox Avatar">
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- ABOUT ME -->
+<!-- ========================= -->
+
+<section id="about">
+
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
+
+<p class="section-sub">
+Get to know who I am.
+</p>
+
+<div class="about-container">
+
+<div class="about-card">
+
+<h3>Hello, I'm <span>0XFORD</span></h3>
+
+<p>
+I'm a Roblox Script Developer focused on creating premium Lua scripts
+with clean architecture, modern UI, and optimized performance.
+</p>
+
+<p>
+I enjoy building automation systems, custom interfaces,
+and powerful script hubs that are fast, lightweight,
+and easy to use.
+</p>
+
+<div class="about-tags">
+
+<span>Lua</span>
+<span>Roblox</span>
+<span>UI Design</span>
+<span>Optimization</span>
+<span>Automation</span>
+
+</div>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h1 class="counter" data-target="120">0</h1>
+<p>Projects</p>
+</div>
+
+<div class="stat-box">
+<h1 class="counter" data-target="50000">0</h1>
+<p>Users</p>
+</div>
+
+<div class="stat-box">
+<h1 class="counter" data-target="5">0</h1>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h1 class="counter" data-target="99">0</h1>
+<p>Success Rate</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- EXPERTISE -->
+<!-- ========================= -->
+
+<section id="expertise">
+
+<h2 class="section-title">
+My <span>Expertise</span>
+</h2>
+
+<p class="section-sub">
+Technologies and skills I specialize in.
+</p>
+
+<div class="expertise-grid">
+
+<div class="skill-card">
+<i class="fa-solid fa-code"></i>
+<h3>Lua Programming</h3>
+<p>Professional Roblox Lua scripting.</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-robot"></i>
+<h3>Automation</h3>
+<p>Auto Farm, Auto Quest, Auto Collect.</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-layer-group"></i>
+<h3>UI Design</h3>
+<p>Modern Roblox Interface.</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Security</h3>
+<p>Reliable & optimized systems.</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-gauge-high"></i>
+<h3>Optimization</h3>
+<p>Fast and lightweight code.</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-cube"></i>
+<h3>Custom Systems</h3>
+<p>Exclusive Roblox features.</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about-container{
+
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:35px;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:20px;
+
+}
+
+.about-card h3{
+
+font-size:32px;
+margin-bottom:20px;
+
+}
+
+.about-card h3 span{
+
+color:var(--blue);
+
+}
+
+.about-card p{
+
+color:var(--text);
+line-height:1.9;
+margin-bottom:18px;
+
+}
+
+.about-tags{
+
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:20px;
+
+}
+
+.about-tags span{
+
+padding:10px 18px;
+
+background:rgba(0,217,255,.12);
+
+border:1px solid rgba(0,217,255,.25);
+
+border-radius:30px;
+
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+
+}
+
+.stat-box{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px rgba(0,217,255,.25);
+
+}
+
+.stat-box h1{
+
+font-size:50px;
+
+color:var(--blue);
+
+}
+
+.stat-box p{
+
+margin-top:10px;
+
+color:var(--text);
+
+}
+
+/* ========================= */
+/* EXPERTISE */
+/* ========================= */
+
+.expertise-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.skill-card{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+text-align:center;
+
+}
+
+.skill-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 35px rgba(0,217,255,.25);
+
+}
+
+.skill-card i{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+color:var(--blue);
+
+}
+
+.skill-card h3{
+
+margin-bottom:15px;
+
+}
+
+.skill-card p{
+
+color:var(--text);
+
+line-height:1.7;
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:900px){
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+</style>
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
+
+<section id="projects">
+
+<h2 class="section-title">
+Featured <span>Projects</span>
+</h2>
+
+<p class="section-sub">
+Some premium Roblox scripts I've worked on.
+</p>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<div class="project-image">
+<i class="fa-solid fa-gamepad"></i>
+</div>
+
+<div class="project-content">
+<h3>Universal Hub</h3>
+<p>
+Multi-game Roblox Script Hub with modern UI and frequent updates.
+</p>
+
+<div class="project-tags">
+<span>Lua</span>
+<span>UI</span>
+<span>Hub</span>
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-image">
+<i class="fa-solid fa-bolt"></i>
+</div>
+
+<div class="project-content">
+<h3>Auto Farm System</h3>
+<p>
+Fast and optimized farming system with anti-lag performance.
+</p>
+
+<div class="project-tags">
+<span>Automation</span>
+<span>Speed</span>
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-image">
+<i class="fa-solid fa-layer-group"></i>
+</div>
+
+<div class="project-content">
+<h3>Premium UI Library</h3>
+<p>
+Clean, animated interface library for Roblox executors.
+</p>
+
+<div class="project-tags">
+<span>Design</span>
+<span>Library</span>
+</div>
+
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact <span>Me</span>
+</h2>
+
+<p class="section-sub">
+Let's build something amazing together.
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<i class="fa-brands fa-discord"></i>
+<h3>Discord</h3>
+<p>YourDiscord</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-brands fa-github"></i>
+<h3>GitHub</h3>
+<p>github.com/0xford</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-brands fa-youtube"></i>
+<h3>YouTube</h3>
+<p>@0xford</p>
+</div>
+
+<div class="contact-card">
+<i class="fa-brands fa-telegram"></i>
+<h3>Telegram</h3>
+<p>@0xford</p>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+
+.projects-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+
+}
+
+.project-card{
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+overflow:hidden;
+transition:.35s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(0,217,255,.25);
+
+}
+
+.project-image{
+
+height:220px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#0b1328,#12264d);
+
+}
+
+.project-image i{
+
+font-size:70px;
+color:#00D9FF;
+
+}
+
+.project-content{
+
+padding:25px;
+
+}
+
+.project-content h3{
+
+margin-bottom:15px;
+
+}
+
+.project-content p{
+
+color:var(--text);
+line-height:1.8;
+
+}
+
+.project-tags{
+
+display:flex;
+gap:10px;
+margin:20px 0;
+
+}
+
+.project-tags span{
+
+padding:8px 15px;
+border-radius:30px;
+background:rgba(0,217,255,.1);
+border:1px solid rgba(0,217,255,.2);
+
+}
+
+.project-btn{
+
+display:inline-block;
+margin-top:10px;
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(90deg,#00D9FF,#2979FF);
+text-decoration:none;
+color:white;
+font-weight:600;
+
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+
+.contact-card{
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:35px;
+text-align:center;
+transition:.35s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(0,217,255,.25);
+
+}
+
+.contact-card i{
+
+font-size:45px;
+margin-bottom:20px;
+color:#00D9FF;
+
+}
+
+.contact-card p{
+
+margin-top:10px;
+color:var(--text);
+
+}
+
+</style>
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<h2>0XFORD</h2>
+
+<p>
+Premium Roblox Script Developer
+</p>
+
+<p style="margin-top:20px;color:#8b9bbd;">
+© 2026 0XFORD. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<div id="loader">
+
+<h1>0XFORD</h1>
+
+<div class="loading-bar">
+<div class="loading-progress"></div>
+</div>
+
+</div>
+
+<style>
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+padding:70px 20px;
+
+text-align:center;
+
+background:#050913;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+footer h2{
+
+font-size:40px;
+
+color:#00D9FF;
+
+margin-bottom:10px;
+
+}
+
+/* ========================= */
+/* LOADER */
+/* ========================= */
+
+#loader{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:#060B18;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+z-index:99999;
+
+transition:.8s;
+
+}
+
+#loader h1{
+
+font-size:60px;
+
+letter-spacing:5px;
+
+color:#00D9FF;
+
+margin-bottom:30px;
+
+}
+
+.loading-bar{
+
+width:260px;
+
+height:6px;
+
+background:#1d2744;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.loading-progress{
+
+height:100%;
+
+width:0%;
+
+background:#00D9FF;
+
+animation:loading 2s linear forwards;
+
+}
+
+@keyframes loading{
+
+100%{
+
+width:100%;
+
+}
+
+}
+
+/* ========================= */
+/* MOUSE GLOW */
+/* ========================= */
+
+#cursorGlow{
+
+position:fixed;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,rgba(0,217,255,.15),transparent 70%);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+}
+
+</style>
+
+<div id="cursorGlow"></div>
+
+<script>
+
+/* ========================= */
+/* LOADING SCREEN */
+/* ========================= */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+
+loader.style.pointerEvents="none";
+
+},2200);
+
+});
+
+/* ========================= */
+/* COUNTER */
+/* ========================= */
+
+const counters=document.querySelectorAll(".counter");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let current=0;
+
+const increment=target/100;
+
+const update=()=>{
+
+current+=increment;
+
+if(current<target){
+
+counter.innerText=Math.floor(current).toLocaleString();
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target.toLocaleString()+"+";
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>observer.observe(counter));
+
+/* ========================= */
+/* SCROLL REVEAL */
+/* ========================= */
+
+const reveal=document.querySelectorAll("section");
+
+const revealObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{opacity:0,transform:"translateY(50px)"},
+
+{opacity:1,transform:"translateY(0)"}
+
+],{
+
+duration:700,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+});
+
+reveal.forEach(section=>{
+
+section.style.opacity=0;
+
+revealObserver.observe(section);
+
+});
+
+/* ========================= */
+/* MOUSE GLOW */
+/* ========================= */
+
+const glow=document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+/* ========================= */
+/* ACTIVE NAV LINK */
+/* ========================= */
+
+const links=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+document.querySelectorAll("section").forEach(sec=>{
+
+const top=window.scrollY;
+
+const offset=sec.offsetTop-150;
+
+const height=sec.offsetHeight;
+
+if(top>=offset && top<offset+height){
+
+current=sec.getAttribute("id");
+
+}
+
+});
+
+links.forEach(link=>{
+
+link.style.color="white";
+
+if(link.getAttribute("href")==="#"+current){
+
+link.style.color="#00D9FF";
+
+}
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
