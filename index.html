@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0XFORD — Roblox Script Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">0XFORD</a>
+      <nav class="nav">
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <button class="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-label">Roblox Script Developer</p>
+          <h1>Halo, saya <span>0XFORD</span></h1>
+          <p class="hero-desc">
+            Saya membuat script Roblox yang bersih, efisien, dan siap pakai.
+            Fokus pada performa, keamanan, dan pengalaman pemain yang smooth.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Lihat Karya</a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="code-title">script.lua</span>
+            </div>
+            <pre class="code-body"><code><span class="kw">local</span> Players = game:GetService(<span class="str">"Players"</span>)
+<span class="kw">local</span> player = Players.LocalPlayer
+
+<span class="kw">local function</span> <span class="fn">setup</span>()
+  <span class="cm">-- clean & optimized</span>
+  print(<span class="str">"0XFORD systems online"</span>)
+<span class="kw">end</span>
+
+setup()</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tentang Saya</h2>
+          <p>Siapa di balik script-script itu</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Saya adalah developer script Roblox yang fokus pada kualitas kode dan pengalaman pengguna.
+              Setiap script yang saya buat dioptimasi agar ringan, stabil, dan mudah diintegrasikan ke game.
+            </p>
+            <p>
+              Saya sudah mengerjakan berbagai jenis sistem: combat, inventory, data saving, UI, anti-cheat,
+              sampai game mechanics khusus. Saya percaya script yang baik tidak hanya berfungsi, tapi juga
+              mudah dipahami dan dirawat.
+            </p>
+            <ul class="about-stats">
+              <li>
+                <strong>3+</strong>
+                <span>Tahun pengalaman</span>
+              </li>
+              <li>
+                <strong>40+</strong>
+                <span>Script & sistem</span>
+              </li>
+              <li>
+                <strong>100%</strong>
+                <span>Fokus kualitas</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <h3>Apa yang saya kerjakan</h3>
+            <ul>
+              <li>Custom combat systems</li>
+              <li>DataStore & saving systems</li>
+              <li>UI / HUD modern</li>
+              <li>Admin & moderation tools</li>
+              <li>Gamepass & monetization</li>
+              <li>Anti-exploit basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proyek Terpilih</h2>
+          <p>Beberapa karya yang pernah saya kerjakan</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-tag">Combat</div>
+            <h3>Advanced Melee System</h3>
+            <p>
+              Sistem combat melee dengan combo, hit detection yang akurat, dan animasi sync.
+              Ringan dan cocok untuk game action.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Client + Server</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Data</div>
+            <h3>Reliable DataStore Framework</h3>
+            <p>
+              Framework penyimpanan data yang aman, dengan retry logic, session locking,
+              dan struktur data yang rapi.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Server</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">UI</div>
+            <h3>Modern Inventory UI</h3>
+            <p>
+              Inventory interaktif dengan drag & drop, sorting, dan animasi halus.
+              Desain clean dan responsif.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Roact / Vanilla</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Tools</div>
+            <h3>Admin Command Panel</h3>
+            <p>
+              Panel admin lengkap: kick, ban, give item, teleport, dan log aktivitas.
+              Mudah dikustomisasi.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Server</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Gameplay</div>
+            <h3>Quest & Progression System</h3>
+            <p>
+              Sistem quest dengan tracking progress, reward, dan notifikasi.
+              Bisa di-extend untuk story-driven game.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Client + Server</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Security</div>
+            <h3>Basic Anti-Exploit Layer</h3>
+            <p>
+              Validasi server-side untuk movement, remote events, dan item duplication.
+              Fondasi keamanan yang solid.
+            </p>
+            <div class="project-meta">
+              <span>Lua</span>
+              <span>Server</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Keahlian</h2>
+          <p>Teknologi & kemampuan yang saya kuasai</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <h4>Lua</h4>
+            <p>Bahasa utama. Clean code, module pattern, OOP ringan.</p>
+          </div>
+          <div class="skill-item">
+            <h4>Roblox Studio</h4>
+            <p>Scripting, tooling, debugging, dan optimasi.</p>
+          </div>
+          <div class="skill-item">
+            <h4>Client-Server</h4>
+            <p>RemoteEvents, RemoteFunctions, security best practices.</p>
+          </div>
+          <div class="skill-item">
+            <h4>DataStore</h4>
+            <p>Saving, loading, versioning, dan error handling.</p>
+          </div>
+          <div class="skill-item">
+            <h4>UI Scripting</h4>
+            <p>Tween, responsive layout, custom components.</p>
+          </div>
+          <div class="skill-item">
+            <h4>Game Design</h4>
+            <p>Systems thinking, balancing, player experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mari Kerja Sama</h2>
+          <p>Butuh script untuk game-mu? Hubungi saya.</p>
+        </div>
+        <div class="contact-box">
+          <p class="contact-lead">
+            Saya terbuka untuk komisi, collab, atau diskusi teknis seputar Roblox development.
+          </p>
+          <div class="contact-links">
+            <a href="#" class="contact-link">
+              <span class="contact-label">Discord</span>
+              <span class="contact-value">0XFORD#0000</span>
+            </a>
+            <a href="#" class="contact-link">
+              <span class="contact-label">Roblox</span>
+              <span class="contact-value">@0XFORD</span>
+            </a>
+            <a href="#" class="contact-link">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">0xford@example.com</span>
+            </a>
+          </div>
+          <p class="contact-note">
+            Ganti data kontak di atas dengan milikmu yang asli sebelum publish.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 0XFORD</span>
+      <span>Roblox Script Developer</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
